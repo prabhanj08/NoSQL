@@ -1,0 +1,9 @@
+MongoDB Tutorial 3 : Key Features of MongoDB
+
+Apart from most of the NoSQL default features, MongoDB does bring in some more, very important and useful features :
+
+MongoDB provides high performance. Input/Output operations are lesser than relational databases due to support of embedded documents(data models) and Select queries are also faster as Indexes in MongoDB supports faster queries.
+MongoDB has a rich Query Language, supporting all the major CRUD operations. The Query Language also provides good Text Search and Aggregation features.
+Auto Replication feature of MongoDB leads to High Availability. It provides an automatic failover mechanism, as data is restored through backup(replica) copy if server fails.
+Sharding is a major feature of MongoDB. Horizontal Scalability is possible due to sharding.
+MongoDB supports multiple Storage Engines. When we save data in form of documents(NoSQL) or tables(RDBMS) who saves the data? It's the Storage Engine. Storage Engines manages how data is saved in memory and on disk.
