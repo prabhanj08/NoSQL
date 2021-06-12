@@ -1,0 +1,20 @@
+MongoDB Tutorial 4: Overview of MongoDB
+
+
+MongoDB consists of a set of databases. Each database again consists of Collections. Data in MongoDB is stored in collections. The below figure depicts the typical database structure in MongoDB.
+Overview of MongoDB
+Database
+Database in MongoDB is nothing but a container for collections. We will learn how to create a new Database, drop a Database and how to use an existing Database in the coming lessons.
+Collections
+Collection is nothing but a set of MongoDB documents. These documents are equivalent to the row of data in tables in RDBMS. But, collections in MongoDB do not relate to any set schema as compared to RDBMS. Collections are a way of storing related data. Being schemaless, any type of Document can be saved in a collection, although similarity is recommended for index efficiency. Document's can have a maximum size of 4MB.
+We can use namespace to logically group and nest collections. For example : There can be one collection named db.studytonight.users to save user informations, then there can be others like db.studytonight.forum.questions and db.studytonight.forum.answers to store forum questions and answers respectively.
+If we create an Index on a namespaced collection, it will only apply on that namespace only. We will learn later in this tutorial, how to create indexes.
+A collection is physically created as soon as the first document is created in it.
+You must be wondering why create multiple collections with different namespace, when we can keep any form or data in a single collection itself. It's because, MongoDB does not index attributes for totally unrelated documents. So it is advised to keep related data in collections.
+Documents
+Document in MongoDB is nothing but the set of key-value pairs. These documents will have dynamic schema which means that the documents in the same collection do not need to possess the same set of fields.
+Since MongoDB is considered as a schema-less database, each collection can hold different type of objects. Every object in a collection is known as Document, which is represented in a JSON like (JavaScript Object Notation) structure(nothing but a list of key-value pair). Data is stored and queried in BSON, its binary representation of JSON-like data. You can know more about BSON format from this webpage →  and 
+Sample Data in MongoDB
+Sample Data in MongoDB
+Note: In the above figure, the field _id represents the primary key identifier of the given document. MongoDB also stores the values in the form of arrays of value as well. Infact any type of data can be stored as values, and nothing requires to be pre-defined. In other words, you do not have to predefine the type of data to be stored, you can store anything you want. Remember, MongoDB is schema-less.
+Documents are not identified by a simple ID, but by an object identifier type. The default Id is a combination of machine identifier, timestamp and process id to keep it unique, but user can changes it to anything.
