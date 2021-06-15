@@ -1,0 +1,19 @@
+Download MongoDB executable .msi file from the site MongoDB Download Centre. Select the latest version for Windows, the Windows Server 2008 R2 is the version if you are on Windows 7, 8 or 10.
+Installing MongoDB on Windows
+Double click the downloaded .msi file to start the installation. Select the option Custom during the installation process, to specify a custom location where you want MongoDB to be installed. By default it is installed in C:\mongodb directory.
+Once the installation is successful, the below directory structure is created. We have installed our MongoDB in D:\java\mongodb
+Installing MongoDB on Windows
+Navigate to the bin directory of the MongoDB to understand about the components used in MongoDB. Below are some of the vital components and files to run them:
+Component	.exe File
+Server	mongod.exe
+Router	mongos.exe
+Client	mongo.exe
+It is required to set up the MongoDB environment. MongoDB stores all its data under the folder data\db. It is best practice to create this directory under the folder where the MongoDB is installed. So let's create a folder named data and one more folder named db inside data folder as shown below.
+Installing MongoDB on Windows
+Also create a log folder to log the MongoDB data transactions. Under the log folder, create a log file FILE_NAME.log.
+Now, to verify whether the installation is successful or not, open the command prompt and navigate to the bin directory of the MongoDB installed folder.
+Execute the command mongod.exe --dbpath "DATA_DIRECTORY_PATH" to configure the data path and start the MongoDB server. Please replace the DATA_DIRECTORY_PATH with the path of data directory present inside MongoDB installed folder. On running this command, the below log will be displayed which says that the MongoDB configuration is successful and the server is up and running fine.
+Installing MongoDB on Windows
+Now, open another command prompt window and navigate to the bin directory of the MongoDB again, and start the MongoDB client in order to use the database system. Run the command mongo in Command Prompt and it will get connected to the MongoDB where the default database is test.
+Installing MongoDB on Windows
+With this, we have successfully installed the MongoDB on the windows environment and we are good to start off with the MongoDB.
